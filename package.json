@@ -8,5 +8,8 @@
   },
   "engines": {
     "node": "12.9"
+  },
+  "scripts":{
+    "start": "node index.js"
   }
 }
