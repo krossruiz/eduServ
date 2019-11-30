@@ -31,9 +31,9 @@ app.get('/getDogs', (req, res) => {
 })
 
 app.post('/postDog', (req, res) => {
-   let {dog} = req;
+   let dog = req.body;
    if(dogCollection){
-    collection.insertOne(dog, (err, result) => {
+    dogCollection.insertOne(dog, (err, result) => {
         res.send(result);
     });
    }
