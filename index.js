@@ -11,7 +11,7 @@ mongo.connect(url, {
     console.error(err)
     return
   }
-  db = client.db('kennel');
+  db = client.db('EduCare');
   dogCollection = db.collection('dogs');
 });
 
