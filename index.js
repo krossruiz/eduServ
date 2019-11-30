@@ -34,7 +34,12 @@ app.post('/postDog', (req, res) => {
    let dog = req.body;
    if(dogCollection){
     dogCollection.insertOne(dog, (err, result) => {
-        res.send(result);
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.send(result);
+        }
     });
    }
    else{
